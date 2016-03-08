@@ -11,7 +11,7 @@ UNDER CONSTRUCTION
 PLEASE TRY AGAIN LATER
 ======================
 
-Dynamic linear models are a sub set of State Space models where distribution is assumed Gaussian, yet they are incredibly useful.
+Dynamic linear models are a sub set of State Space models where distributions are assumed Gaussian, yet they are incredibly useful.
 
 In this post we will learn the common types of DLM, bit of math behind them and their implimentation in R using dlm and dlmodeler packages.
 DLMs are a natural upgrade from Linear regression and their basic understanding is assumed for this post.
@@ -20,23 +20,55 @@ PS: This post uses MathJax to display equations and special symbols which do not
 
 So lets begin.
 
-DLM's are composed of Observations (the $$ y_is $$), and unobserved states (the $$ \theta_is $$).
+DLM's are composed of Observations (the $$ y_is $$), and unobserved states (the $$ \mathbf a_is $$).
 
 General form of DLM is:
 <div>
 $$
-y_t = \mathbf Z_t' \mathbf a_t + \epsilon_t        \epsilon_t \sim \mathbf NID(0, \sigma_t^2) \\
-\mathbf a_{t+1} = \mathbf T_t\mathbf a_t + \mathbf R_t\eta_t
+y_t = \mathbf Z_t' \mathbf a_t + \epsilon_t \qquad  \epsilon_t \sim NID(0, \sigma_\epsilon^2) \\
+\mathbf a_{t+1} = \mathbf T_t\mathbf a_t + \mathbf R_t\eta_t  \qquad  \eta_t \sim NID(0, Q_t) \\
+
 $$
 </div>
-First equation is called as equation, and second is called State equation.
+First equation is called as Observation or Measurent equation, and second is called State equation.
 
+Time series are composed of various components which include level, trend, season and regression.
+These components can be added up to give a model of time series under observation.
+These components are modeled as special cases of the genreral equation above.
 
 Local Level Model
 =
+(aka Random walk plus noise model)
+
+Level component in a DLM could be compared to the intercept (aka the constant) in a regression model. 
+However level in DLM is time varying, where as intercept in regression is constant.
+The 'local' in the Local level model comes form this variation with time. 
+Hence the level in DLMs is 'local' and not 'global'. 
+
+Local Level Models are represented as:
+<div>
+$$
+y_t = \mathbf a_t + \epsilon_t \qquad  \epsilon_t \sim NID(0, \sigma_\epsilon^2) \\
+\mathbf a_{t+1} = \mathbf a_t + \mathbf R_t\eta_t  \qquad  \eta_t \sim NID(0, Q_t) \\
+$$
+</div>
+Second equation above defines a random walk, hence the name Random walk plus noise.
+
+TODO: Hyperparameters
+
+TODO: Diagnostic tests
 
 Local Linear Trend Model
 =
+Local Linear models are obtained by adding a slope component $$ \mathbf v_t $$ to the Local level models.
+<div>
+$$
+y_t = \mathbf a_t + \epsilon_t \qquad  \epsilon_t \sim NID(0, \sigma_\epsilon^2) \\
+\mathbf a_{t+1} = \mathbf a_t + \mathbf v_t + \mathbf R_t\eta_t  \qquad  \eta_t \sim NID(0, Q_t) \\
+\mathbf v_{t+1} = \mathbf v_t + \zeta_t   \qquad \zeta_t \sim NID(0, \sigma_\zeta^2)
+$$
+</div>
+
 
 Seasonal Model
 =
