@@ -20,7 +20,7 @@ PS: This post uses MathJax to display equations and special symbols which do not
 
 So lets begin.
 
-DLM's are composed of Observations (the $$ y_is $$), and unobserved states (the $$ \mathbf a_is $$).
+DLM's are composed of Observations (the $$ y_ts $$), and unobserved states (the $$ \mathbf a_ts $$).
 
 General form of DLM is:
 <div>
@@ -52,11 +52,16 @@ y_t = \mathbf a_t + \epsilon_t \qquad  \epsilon_t \sim NID(0, \sigma_\epsilon^2)
 \mathbf a_{t+1} = \mathbf a_t + \mathbf R_t\eta_t  \qquad  \eta_t \sim NID(0, Q_t) \\
 $$
 </div>
-Second equation above defines a random walk, hence the name Random walk plus noise.
+If the variance in the second equation is taken as zero (deterministic case), it becomes a horizontal line and if the variance is non-zero (stochastic case) the equation defines a random walk, hence the name Random walk plus noise (noise refers to non-zero variance of observations $$ y_ts $$).
 
-TODO: Hyperparameters
+TODO:: Add a picture showing a use case
 
-TODO: Diagnostic tests
+This model can be used to model the constant component of a time series.
+If the time series also has an increasing trend, a trend component can be added to this local level model, such a model is unsurprisingly called a Local linear trend model.
+
+TODO:: Hyperparameters
+
+TODO:: Diagnostic tests
 
 Local Linear Trend Model
 =
