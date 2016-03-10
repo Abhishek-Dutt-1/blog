@@ -25,9 +25,10 @@ DLM's are composed of Observations (the $$ y_ts $$), and unobserved states (the 
 General form of DLM is:
 <div>
 $$
-y_t = \mathbf Z_t' \mathbf a_t + \epsilon_t \qquad  \epsilon_t \sim NID(0, \sigma_\epsilon^2) \\
-\mathbf a_{t+1} = \mathbf T_t\mathbf a_t + \mathbf R_t\eta_t  \qquad  \eta_t \sim NID(0, Q_t) \\
-
+\begin{align}
+y_t & = \mathbf Z_t' \mathbf a_t + \epsilon_t & \epsilon_t  \sim NID(0, \sigma_\epsilon^2) \\
+\mathbf a_{t+1} & = \mathbf T_t\mathbf a_t + \mathbf R_t\eta_t  & \eta_t \sim NID(0, Q_t) \\
+\end{align}
 $$
 </div>
 First equation is called as Observation or Measurent equation, and second is called State equation.
@@ -48,8 +49,10 @@ Hence the level in DLMs is 'local' and not 'global'.
 Local Level Models are represented as:
 <div>
 $$
-y_t = \mathbf a_t + \epsilon_t \qquad  \epsilon_t \sim NID(0, \sigma_\epsilon^2) \\
-\mathbf a_{t+1} = \mathbf a_t + \mathbf R_t\eta_t  \qquad  \eta_t \sim NID(0, Q_t) \\
+\begin{align}
+              y_t & = \mathbf \mu_t + \epsilon_t          & \epsilon_t \sim NID(0, \sigma_\epsilon^2) \\
+\mathbf \mu_{t+1} & = \mathbf \mu_t + \mathbf R_t\eta_t   & \eta_t \sim NID(0, Q_t) \\
+\end{align}
 $$
 </div>
 If the variance in the second equation is taken as zero (deterministic case), it becomes a horizontal line and if the variance is non-zero (stochastic case) the equation defines a random walk, hence the name Random walk plus noise (noise refers to non-zero variance of observations $$ y_ts $$).
@@ -57,7 +60,7 @@ If the variance in the second equation is taken as zero (deterministic case), it
 TODO:: Add a picture showing a use case
 
 This model can be used to model the constant component of a time series.
-If the time series also has an increasing trend, a trend component can be added to this local level model, such a model is unsurprisingly called a Local linear trend model.
+If the time series also has an inclined trend, a trend component can be added to this local level model, such a model is unsurprisingly called a Local linear trend model.
 
 TODO:: Hyperparameters
 
@@ -68,15 +71,32 @@ Local Linear Trend Model
 Local Linear models are obtained by adding a slope component $$ \mathbf v_t $$ to the Local level models.
 <div>
 $$
-y_t = \mathbf a_t + \epsilon_t \qquad  \epsilon_t \sim NID(0, \sigma_\epsilon^2) \\
-\mathbf a_{t+1} = \mathbf a_t + \mathbf v_t + \mathbf R_t\eta_t  \qquad  \eta_t \sim NID(0, Q_t) \\
-\mathbf v_{t+1} = \mathbf v_t + \zeta_t   \qquad \zeta_t \sim NID(0, \sigma_\zeta^2)
+\begin{align}
+              y_t & = \mathbf \mu_t + \epsilon_t \qquad                   &&  \epsilon_t \sim NID(0, \sigma_\epsilon^2) \\
+\mathbf \mu_{t+1} & = \mathbf \mu_t + \mathbf \nu_t + \mathbf R_t\eta_t   &&  \eta_t \sim NID(0, Q_t) \\
+\mathbf \nu_{t+1} & = \mathbf \nu_t + \zeta_t                             &&  \zeta_t \sim NID(0, \sigma_\zeta^2)
+\end{align}
 $$
 </div>
 
 
 Seasonal Model
 =
+Seasonal models are used to capture recurring patterns in a time series, such as increase in sales during holiday seasons etc.
+
+Seasonality in a time series is modeled using as many as state variables as the frequency of the data.
+Frequency (aka seasonality) refers to the number of time periods after which pattern is supposed to repeat. e.g. for a monthly data frequency should be 12, 52 for weekly data and 4 for quarterly data.
+
+Takin the example of quarterly data, a seasonal model (with Local level model) is represented as:
+
+<div>
+$$
+\begin{align}
+            y_t & = \mathbf a_t + \epsilon_t            & \epsilon_t \sim NID(0, \sigma_\epsilon^2) \\
+\mathbf a_{t+1} & = \mathbf a_t + \mathbf R_t\eta_t     & \eta_t \sim NID(0, Q_t) \\
+\end{align}
+$$
+</div>
 
 Explanatory Model
 =
@@ -85,6 +105,9 @@ Intervention Model
 =
 
 Deterministic vs. Stochastic
+=
+
+Forecast and Smoothening
 =
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
