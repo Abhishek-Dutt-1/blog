@@ -20,15 +20,16 @@ Alternative Solutions: Google tells me there arent that many options in the Java
 
 From the top!.
 Set up a dummy Play project and run:
+
 * activator new poi-test play-java
 * cd poi-test
 * sbt run
 
 Add Apache POI to build.sbt (3.14 is the current stable version. check: http://mvnrepository.com/artifact/org.apache.poi/poi/3.14)
+
 libraryDependencies += "org.apache.poi" % "poi" % "3.14"
+
 libraryDependencies += "org.apache.poi" % "poi-ooxml" % "3.14"
-
-
 
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
