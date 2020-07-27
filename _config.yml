@@ -19,3 +19,5 @@ github_username:  AbhishekDutt
 
 # Build settings
 markdown: kramdown
+
+theme: jekyll-theme-time-machine
