@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Apache POI: Handling Excel files with (Java) Play Framework v2.5.x"
+title:  "Apache POI: Handling Excel Files with (Java) Play Framework v2.5.x"
 date:   2016-05-11 15:20:00 +0530
-categories: Java, Play Framework, Excel, POI
+categories: Java Play-Framework Excel POI
 ---
 
 UNDER CONSTRUCTION
