@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Probability] Fair or Unfair Coin "
+title:  "Fair or Unfair Coin"
 date:   2020-07-27 21:00:00 +0530
 categories: interview probability
 ---
@@ -10,7 +10,8 @@ categories: interview probability
 
 There is a fair coin (one side heads, one side tails) and an unfair coin (both sides tails). <br/>
 You pick one at random, flip it 5 times, and observe that it comes up as tails all five times. <br/>
-What is the chance that you are flipping the unfair coin? <br/> <br/>
+What is the chance that you are flipping the unfair coin? <br/> <br/> 
+[Index](/blog/2020/08/10/table-of-contents.html) <br/> <br/>
 <hr/>
 <br/>
 

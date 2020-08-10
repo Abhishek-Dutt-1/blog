@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Probability] Rolls to see all sides die"
+title:  "Rolls to See All Sides of a Die"
 date:   2020-07-28 21:54:00 +0530
 categories: interview probability
 ---
@@ -8,8 +8,8 @@ categories: interview probability
 
 ### Problem:
 
-What is the expected number of rolls needed to see all 6 sides of a fair die?
-
+What is the expected number of rolls needed to see all 6 sides of a fair die? <br/> <br/>
+[Index](/blog/2020/08/10/table-of-contents.html) <br/>
 <br/>
 <hr/>
 <br/>
@@ -17,14 +17,16 @@ What is the expected number of rolls needed to see all 6 sides of a fair die?
 
 ### Solution:
 Let number of sides already seen = \\(k\\), here \\(k\\) = 0, 1, 2, 3, 4, 5, 6 <br/>
-Probability of seeing the \\(k^{th}\\) new side \\(= \frac{6-k}{6} \\) <br/>
+Probability of seeing the a new side, after seeing \\(k\\) sides already \\(= \frac{6-k}{6} \\) <br/>
 
 Probability distribution of seeing a new side follows the Geometric Distribution. <br/>
 For Geometric Distributions, the expected number of rolls to see new side is given by: <br/>
 <div>$$
-E(X) = \frac{6}{6-k} = \text{Number of rolls needed to see a new side, having already seen k unique sides.}
+E(X) = \frac{1}{p} = \frac{6}{6-k} = \text{Number of rolls needed to see a new side, having already seen k unique sides.}
 $$</div>
-Here \\(X\\) is the random variable denoting the number of rolls needed to see the new side.
+Here: <br/>
+\\(X\\): random variable denoting the number of rolls needed to see the new side <br/>
+\\(p\\): probability of success (i.e. seeing a new side) on a roll.
 
 Hence, expected number of rolls needed to see all sides:
 <div>$$
@@ -51,11 +53,11 @@ Average number of rolls needed to see all sides =
 + Av. number of rolls needed to see 5th new side after seeing 4 unique sides
 + Av. number of rolls needed to see 6th new side after seeing 5 unique sides
 ```
-In other words, if we have seen \\(k\\) sides already, then average number of rolls needed to see all sides is:
+In other words, then average number of rolls needed to see **all** sides is:
 <div>$$
 = E(X)_{k=0} + E(X)_{k=1} + E(X)_{k=2} + E(X)_{k=3} + E(X)_{k=4} + E(X)_{k=5}
 $$</div>
-
+Where \\(k\\) is the number of sides already seen.
 <br/>
 <hr/>
 <br/>
@@ -135,11 +137,11 @@ On average we will see the 4th, 5th and 6th unseen side in \\(\frac{6}{3}, \frac
 To get the expected number of rolls needed to see all the sides, we add all the expected number of rolls to see 1st, 2nd, 3rd, 4th, 5th and 6th new side.
 <div>$$
 \begin{aligned}
-&= 1 + \frac{6}{5} + \frac{6}{4} + \frac{6}{3} + \frac{6}{2} + \frac{6}{1} \\
-&= 14.7 \\
+&= 1 + \frac{6}{5} + \frac{6}{4} + \frac{6}{3} + \frac{6}{2} + \frac{6}{1} \\[2ex]
+&= 14.7 \\[2ex]
 \end{aligned}
 $$</div>
 
-
+<br/> <br/> [Back to Index](/blog/2020/08/10/table-of-contents.html)
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
