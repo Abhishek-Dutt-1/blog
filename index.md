@@ -6,7 +6,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: home
-# title: This is index.html
+title: false
 list_title: "All Posts:"
 ---
 ## Welcome! 
@@ -19,9 +19,9 @@ I write on topics related to:
 - Algorithms & Data Structures
 - Coding Interview Questions
 
-Check out [Table of Contents]({% post_url 2020-08-10-table-of-contents %}) for the topic wise index of posts in this blog.
+Check out [Table of Contents]({{site.baseurl}}{% post_url 2020-08-10-table-of-contents %}) for the topic wise index of posts in this blog.
 
-Know more [About Me]({% link about.md %}) if you are curious.
+Know more [About Me]({{site.baseurl}}{% link about.md %}) if you are curious.
 
 ### Thanks!
 <hr/>

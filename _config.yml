@@ -66,4 +66,4 @@ disqus:
   shortname: abhisheks-blog
 
 url: https://abhishekdutt.github.io/
-baseurl: "/blog"
+baseurl: /blog
