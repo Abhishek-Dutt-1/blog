@@ -1,15 +1,17 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+[TODO] Think of an interesting bio.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+# Social Media:
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Feel free to connect with me:
+
+<a href="https://github.com/AbhishekDutt"><img alt="LinkedIn" src="https://github.com/AbhishekDutt/AbhishekDutt/raw/master/icons/github-square-512.png" width="50" height="50"></a>|<a href="https://www.linkedin.com/in/abhishekdutt01/"><img alt="LinkedIn" src="https://github.com/AbhishekDutt/AbhishekDutt/raw/master/icons/sm-icons-linkedIn-In-tm.png" width="50" height="50"></a>|<a href="https://www.instagram.com/abhishek.dutt/"><img alt="Instagram" src="https://github.com/AbhishekDutt/AbhishekDutt/raw/master/icons/sm-icons-instagram-app-icon.png" width="50" height="50"></a>|<a href="https://twitter.com/_AbhishekDutt01"><img alt="Twitter" src="https://github.com/AbhishekDutt/AbhishekDutt/raw/master/icons/sm-icons-twitter-social-icon-rounded-square-color.png" width="50" height="50"></a>|<img alt="Nintendo Switch" src="https://github.com/AbhishekDutt/AbhishekDutt/raw/master/icons/switch_white.png" width="50" height="50"/>
+:--:|:--:|:--:|:--:|:--:
+[GitHub](https://github.com/AbhishekDutt "GitHub")|[LinkedIn](https://www.linkedin.com/in/abhishekdutt01/ "LinkedIn")|[Instagram](https://www.instagram.com/abhishek.dutt/ "Instagram")|[Twitter](https://twitter.com/_AbhishekDutt01 "Twitter")|Switch
+
+Switch Code: <b>SW-7010-0712-7542</b>

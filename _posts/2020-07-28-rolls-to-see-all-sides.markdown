@@ -4,16 +4,14 @@ title:  "Rolls to See All Sides of a Die"
 date:   2020-07-28 21:54:00 +0530
 categories: interview probability
 ---
-<hr/> <br/>
+<hr/>
 
 ### Problem:
 
 What is the expected number of rolls needed to see all 6 sides of a fair die? <br/> <br/>
-[Index](/blog/2020/08/10/table-of-contents.html) <br/>
-<br/>
-<hr/>
-<br/>
+[Index]({% post_url 2020-08-10-table-of-contents %}) <br/>
 
+<hr/>
 
 ### Solution:
 Let number of sides already seen = \\(k\\), here \\(k\\) = 0, 1, 2, 3, 4, 5, 6 <br/>
@@ -21,25 +19,27 @@ Probability of seeing the a new side, after seeing \\(k\\) sides already \\(= \f
 
 Probability distribution of seeing a new side follows the Geometric Distribution. <br/>
 For Geometric Distributions, the expected number of rolls to see new side is given by: <br/>
-<div>$$
+
+$$
 E(X) = \frac{1}{p} = \frac{6}{6-k} = \text{Number of rolls needed to see a new side, having already seen k unique sides.}
-$$</div>
+$$
+
 Here: <br/>
 \\(X\\): random variable denoting the number of rolls needed to see the new side <br/>
 \\(p\\): probability of success (i.e. seeing a new side) on a roll.
 
 Hence, expected number of rolls needed to see all sides:
-<div>$$
+
+$$
 \begin{aligned}
 \sum_{k=0}^{5} \frac{6}{6-k} &= 1 + \frac{6}{5} + \frac{6}{4} + \frac{6}{3} + \frac{6}{2} + \frac{6}{1} \\
 &= 14.7 \\
 \end{aligned}
-$$</div><br/>
+$$
 
-Ref. [Geometric Distribution](/blog/2020/08/01/geometric-probability-distribution.html) for more details.
-<br/>
+Ref. [Geometric Distribution]({% post_url 2020-08-01-geometric-probability-distribution %}) for more details.
+
 <hr/>
-<br/>
 
 ### Solution Discussion:
 
@@ -54,13 +54,14 @@ Average number of rolls needed to see all sides =
 + Av. number of rolls needed to see 6th new side after seeing 5 unique sides
 ```
 In other words, then average number of rolls needed to see **all** sides is:
-<div>$$
+
+$$
 = E(X)_{k=0} + E(X)_{k=1} + E(X)_{k=2} + E(X)_{k=3} + E(X)_{k=4} + E(X)_{k=5}
-$$</div>
+$$
+
 Where \\(k\\) is the number of sides already seen.
-<br/>
+
 <hr/>
-<br/>
 
 Lets consider the scenario:
 
@@ -85,12 +86,11 @@ If we try this whole scenario again, we might see the second new side on some di
 
 But what we need is the average (expected) number of rolls needed to see the second new side of the die. <br/>
 
-<br/>
 <hr/>
-<br/>
 
 Let the number of rolls needed untill we see the second new side be the random variable \\(X\\), and probability of seeing this new side is \\(p = \frac{5}{6}\\) as before. <br/>
-<div>$$
+
+$$
 \begin{aligned}
 P(X=1) &= \frac{5}{6} \\[2ex]
 P(X=2) &= \left(1-\frac{5}{6}\right) * \frac{5}{6} \quad &&\text{(i.e. first is a failure, 2nd is success)} \\[2ex]
@@ -98,27 +98,27 @@ P(X=3) &= \left(1-\frac{5}{6}\right)^2 * \frac{5}{6} \quad &&\text{(i.e. first a
 & \cdots \\
 P(X=k) &= \left(1-\frac{5}{6}\right)^{k-1} * \frac{5}{6} \quad &&\text{(i.e. first k-1 are a failure, k is success)} \\[2ex]
 \end{aligned}
-$$</div>
+$$
+
 This \\(P(X)\\) is known as the Geometric Distribution.
 
-<br/>
 <hr/>
-<br/>
 
 Even without stating explicitly like above, we can observe that:
 - On each roll there can be just two outcomes, success (we see a new side) and failure (we see an old side of the die).
 - Probability of success does not change with each roll.
 
 In such trials, probability of getting a success in \\(k^{th}\\) trial follows the Geometric Distribution:
-<div>$$
-P(X=k) = (1-p)^{k-1} \cdot p
-$$</div>
-Expected value of a Geometric Distribution is well known:
-<div>$$ E(X) = \frac{1}{p} $$</div>
 
-<br/>
+$$
+P(X=k) = (1-p)^{k-1} \cdot p
+$$
+
+Expected value of a Geometric Distribution is well known:
+
+$$ E(X) = \frac{1}{p} $$
+
 <hr/>
-<br/>
 
 So on average we can expect to see the second new face in \\(E(X) = \frac{1}{p} = \frac{6}{5} \\) rolls after seeing the first one.
 
@@ -135,13 +135,12 @@ This means the probability of seeing the 4th, 5th and 6th as yet unseen side of 
 On average we will see the 4th, 5th and 6th unseen side in \\(\frac{6}{3}, \frac{6}{2}, \frac{6}{1} \\) roll respectively, after seeing the previous new side. <br/>
 
 To get the expected number of rolls needed to see all the sides, we add all the expected number of rolls to see 1st, 2nd, 3rd, 4th, 5th and 6th new side.
-<div>$$
+
+$$
 \begin{aligned}
 &= 1 + \frac{6}{5} + \frac{6}{4} + \frac{6}{3} + \frac{6}{2} + \frac{6}{1} \\[2ex]
 &= 14.7 \\[2ex]
 \end{aligned}
-$$</div>
+$$
 
-<br/> <br/> [Back to Index](/blog/2020/08/10/table-of-contents.html)
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+[Back to Index]({% post_url 2020-08-10-table-of-contents %})

@@ -5,7 +5,7 @@ date: 2020-08-01 10:37:00 +0530
 tags: theory probability
 ---
 
-[Index](/blog/2020/08/10/table-of-contents.html) \| [Uniform](/blog/2020/08/01/uniform-probability-distribution.html) \| [Normal](/blog/2020/08/01/normal-probability-distribution.html) \| [Poisson](/blog/2020/08/01/poisson-probability-distribution.html) \| [Binomial](/blog/2020/08/01/binomial-probability-distribution.html) \| [Geometric](/blog/2020/08/01/geometric-probability-distribution.html)
+[Index]({% post_url 2020-08-10-table-of-contents %}) \| Uniform \| Normal \| Poisson \| Binomial \| [Geometric]({% post_url 2020-08-01-geometric-probability-distribution %})
 
 ### Bernoulli trial:
 A Bernoulli trial is trial with following two properties:
