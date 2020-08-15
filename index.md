@@ -6,20 +6,22 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
 layout: home
-title: false
+title: ""
 list_title: "All Posts:"
----
-## Welcome! 
+--- 
+
+## Hello!
+
 I am Abhishek. 
 
-This blog is a data lake for my mind.
+This blog is a data lake of my mind.
 
 I write on topics related to:
 - Data Science / Machine Learning
 - Algorithms & Data Structures
 - Coding Interview Questions
 
-Check out [Table of Contents]({{site.baseurl}}{% post_url 2020-08-10-table-of-contents %}) for the topic wise index of posts in this blog.
+Check out **[Table of Contents]({{site.baseurl}}{% post_url 2020-08-10-table-of-contents %})** for the topic wise index of posts in this blog.
 
 Know more [About Me]({{site.baseurl}}{% link about.md %}) if you are curious.
 

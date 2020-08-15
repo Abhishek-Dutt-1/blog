@@ -11,7 +11,7 @@ categories: interview probability
 There is a fair coin (one side heads, one side tails) and an unfair coin (both sides tails). <br/>
 You pick one at random, flip it 5 times, and observe that it comes up as tails all five times. <br/>
 What is the chance that you are flipping the unfair coin? <br/> <br/> 
-[Index]({% post_url 2020-08-10-table-of-contents %}) <br/> <br/>
+[Index]({{site.baseurl}}{% post_url 2020-08-10-table-of-contents %}) <br/> <br/>
 <hr/>
 
 ### Solution (method 1):

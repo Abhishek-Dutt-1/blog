@@ -9,7 +9,7 @@ categories: interview probability
 ### Problem:
 
 What is the expected number of rolls needed to see all 6 sides of a fair die? <br/> <br/>
-[Index]({% post_url 2020-08-10-table-of-contents %}) <br/>
+[Index]({{site.baseurl}}{% post_url 2020-08-10-table-of-contents %}) <br/>
 
 <hr/>
 
@@ -37,7 +37,7 @@ $$
 \end{aligned}
 $$
 
-Ref. [Geometric Distribution]({% post_url 2020-08-01-geometric-probability-distribution %}) for more details.
+Ref. [Geometric Distribution]({{site.baseurl}}{% post_url 2020-08-01-geometric-probability-distribution %}) for more details.
 
 <hr/>
 
@@ -143,4 +143,4 @@ $$
 \end{aligned}
 $$
 
-[Back to Index]({% post_url 2020-08-10-table-of-contents %})
+[Back to Index]({{site.baseurl}}{% post_url 2020-08-10-table-of-contents %})
