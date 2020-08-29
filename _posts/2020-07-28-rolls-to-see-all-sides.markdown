@@ -9,7 +9,6 @@ categories: interview probability
 ### Problem:
 
 What is the expected number of rolls needed to see all 6 sides of a fair die? <br/> <br/>
-[Index]({{site.baseurl}}{% post_url 2020-08-10-table-of-contents %}) <br/>
 
 <hr/>
 
@@ -142,5 +141,3 @@ $$
 &= 14.7 \\[2ex]
 \end{aligned}
 $$
-
-[Back to Index]({{site.baseurl}}{% post_url 2020-08-10-table-of-contents %})

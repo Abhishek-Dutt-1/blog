@@ -55,8 +55,8 @@ minima:
 # Build settings
 theme: minima
 minima:
-  # skin: classic
-  skin: dark  
+  skin: classic
+  # skin: dark  
 
 plugins:
  - jekyll-feed

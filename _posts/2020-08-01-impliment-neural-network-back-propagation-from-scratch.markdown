@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Code] Implimenting Neural Network with Backpropagation from Scratch"
+title:  "Implimenting Neural Network with Backpropagation from Scratch"
 date:   2020-08-01 10:37:00 +0530
 ---
 
@@ -60,7 +60,9 @@ This simplifies for a binary case \\((C=2)\\):
 $$</div>
 
 <br/>
-Forward Propagation: <br/>
+
+### Forward Propagation:
+
 Putting together everything discussed so far:
 - We start with an input vector: \\(x^{[i]}\\)
 - Output of 1st layer: \\(a1 = \text{ReLU}( W1 \cdot x^{[i]} + b1) \\)
@@ -80,7 +82,7 @@ def forward(self):
 ```
 
 
-Backpropagation:
+### Backpropagation:
 
 As we saw in forward pass, starting with input vector x, we reach loss. <br/>
 For backpropagation we will need to compute the derivative of \\(loss\\) with all the variables (i.e. \\(Z2, W2, b2, Z1, W1, b1\\)). <br/>

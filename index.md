@@ -16,12 +16,16 @@ I am Abhishek.
 
 This blog is a data lake of my mind.
 
+Information here has been collected from various sources on the internet.
+
+Some are my original thoughts as well.
+
 I write on topics related to:
 - Data Science / Machine Learning
 - Algorithms & Data Structures
 - Coding Interview Questions
 
-Check out **[Table of Contents]({{site.baseurl}}{% post_url 2020-08-10-table-of-contents %})** for the topic wise index of posts in this blog.
+Check out [Post Index]({{site.baseurl}}{% link post_index.md %}) for more organized list of posts in this blog.
 
 Know more [About Me]({{site.baseurl}}{% link about.md %}) if you are curious.
 

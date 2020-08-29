@@ -3,7 +3,6 @@ layout: post
 title:  "Explain p-value in Simple Language"
 date:   2020-08-10 10:46:00 +0530
 ---
-[Index]({{site.baseurl}}{% post_url 2020-08-10-table-of-contents %}) <br/> <br/>
 
 In symbolic form:
 
@@ -29,4 +28,4 @@ Wikipedia definition:
 > A very small p-value means that such an extreme observed outcome is very unlikely under the null hypothesis.
 
 
-<br/> <br/> [Back to Index]({{site.baseurl}}{% post_url 2020-08-10-table-of-contents %})
+<br/> <br/> [Back to Index]({{site.baseurl}}{% link post_index.md %})

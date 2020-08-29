@@ -1,17 +1,15 @@
 ---
 layout: post
-title:  "Fair or Unfair Coin"
-date:   2020-07-27 21:00:00 +0530
+title: "Probability of choosing the unfair coin"
+date: 2020-07-27 21:00:00 +0530
 categories: interview probability
 ---
 <hr/>
-
 ### Problem:
-
 There is a fair coin (one side heads, one side tails) and an unfair coin (both sides tails). <br/>
 You pick one at random, flip it 5 times, and observe that it comes up as tails all five times. <br/>
-What is the chance that you are flipping the unfair coin? <br/> <br/> 
-[Index]({{site.baseurl}}{% post_url 2020-08-10-table-of-contents %}) <br/> <br/>
+What is the chance that you are flipping the unfair coin? <br/> <br/> <br/>
+
 <hr/>
 
 ### Solution (method 1):
@@ -97,44 +95,77 @@ $$
 
 <hr/>
 
-### Solution (method 2):
+### Solution (method 2.1):
 
-We can viusalize the probabilities using the follwoing diagram:
+Suppose we repeated the experiment 10,000 times.
+
+We can viusalize the number of cases for each event using the following tree:
 
 <div class="mermaid">
 graph LR;
-    A(Start)--Fair-->F("P(Fair)=1/2");
-    A(Start)--Unfair-->U("P(Unfair)=1/2");
-    F--TTTTT-->FT("P(TTTTT|Fair)=(1/2)^5");
-    F--Not TTTTT-->FNT("P(Not TTTTT|Fair)=1-(1/2)^5");
-    U--TTTTT-->UT("P(TTTTT|Unfair)=1");
-    U--Not TTTTT-->UNT("P(Not TTTTT|Unfair)=0");
+    A(10,000)--"P(Fair)=1/2"-->F("5,000");
+    A(10,000)--"P(Unfair)=1/2"-->U("5,000");
+    F--"P(TTTTT|Fair)=(1/2)^5"-->FT("5,000 * (1/2)^5");
+    F--"P(Not TTTTT|Fair)=1-(1/2)^5"-->FNT("5,000 * 1-(1/2)^5");
+    U--"P(TTTTT|Unfair)=1"-->UT("5,000");
+    U--"P(Not TTTTT|Unfair)=0"-->UNT("5,000 * 0");
 </div>
 
-So the total probability of getting TTTTT:
+Since its given we got 5 tails, we ignore the Not TTTTT branches.
+
+The total number of cases where we get TTTTT:
 
 $$
-P(TTTTT|Unfair) + P(TTTTT|Fair) = 1 + \left(\frac{1}{2}\right)^5
+TTTTT = TTTTT|Fair + TTTTT|Unfair = 5000 \times \left(\frac{1}{2}\right)^5 + 5000
 $$
 
 Of these, contribution from the Unfair coin was:
 
 $$
-P(TTTTT|Unfair) = 1
+TTTTT|Unfair = 5000
 $$
 
 So probability that we had the Unfair coin, given that we observed TTTTT:
 
 $$
 \begin{aligned}
-P(Unfair|TTTTT) &= \frac{ P(TTTTT|Unfair) }{ P(TTTTT|Unfair) + P(TTTTT|Fair) } \\[2ex]
-&= \frac{ 1 }{ \bigl( 1 + \left( \frac{1}{2} \right) ^5 \bigr)} \\[2ex]
+P(Unfair|TTTTT) &= \frac{ TTTTT|Unfair }{ TTTTT|Fair + TTTTT|Unfair } \\[2ex]
+&= \frac{ 5000 }{ 5000 \times \left(\frac{1}{2}\right)^5 + 5000 } \\[2ex]
+&= \frac{ 1 }{ \bigl( \left( \frac{1}{2} \right) ^5 + 1 \bigr)} \\[2ex]
 &= \frac{2^5}{2^5+1} \\[2ex]
 \end{aligned}
 $$
 
 <hr/>
 
+### Solution (method 2.2):
+
+Another way of visualizing the probability tree is to just multiply the probabilities as we go deeper into a branch.
+This is same as taking 1 instead of 10,000 in above method.
+
+<div class="mermaid">
+graph LR;
+    A(1)--"Fair"-->F("P(Fair)=1/2");
+    A(1)--"Unfair"-->U("P(Unfair)=1/2");
+    F--"TTTTT|Fair"-->FT("P(TTTTT|Fair)=(1/2)*(1/2)^5");
+    F--"Not TTTTT|Fair"-->FNT("P(Not TTTTT|Fair)=(1/2)*(1-(1/2)^5)");
+    U--"TTTTT|Unfair"-->UT("P(TTTTT|Unfair)=(1/2)*1");
+    U--"Not TTTTT|Unfair"-->UNT("P(Not TTTTT|Unfair)=(1/2)*0");
+</div>
+
+Since it is given we got 5 tails, we ignore the Non TTTTT branches. <br/>
+Hence, the probability that we had the Unfair coin, given that we observed TTTTT:
+
+$$
+\begin{aligned}
+P(Unfair|TTTTT) &= \frac{ P(TTTTT|Unfair) }{ P(TTTTT|Fair) + P(TTTTT|Unfair) } \\[2ex]
+&= \frac{ (1/2)*1 }{ (1/2) * (1/2)^5 + (1/2)*1 } \\[2ex]
+&= \frac{ 1 }{ \bigl( \left( \frac{1}{2} \right) ^5 + 1 \bigr)} \\[2ex]
+&= \frac{2^5}{2^5+1} \\[2ex]
+\end{aligned}
+$$
+
+<hr/>
 [TODO: Add baysian explaination]
 
 https://www.quora.com/You-have-two-coins-one-of-which-is-fair-and-comes-up-heads-with-a-probability-1-2-and-the-other-which-is-biased-and-comes-up-heads-with-probability-3-4-You-randomly-pick-coin-and-flip-it-twice-and-get-heads-both-times-What-is-the-probability-that-you-picked-the-fair-coin
