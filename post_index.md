@@ -13,7 +13,8 @@ permalink: /index/
 
 ## Probability
 Law of Large Numbers <br/>
-[Central Limit Theorem]({{site.baseurl}}{% post_url 2020-08-29-central-limit-theorem %})
+[Central Limit Theorem]({{site.baseurl}}{% post_url 2020-08-29-central-limit-theorem %}) <br/>
+[CLT: Practice Questions]({{site.baseurl}}{% post_url 2020-08-29-q1-central-limit-theorem %})
 
 ## Probability Distributions:
 [Bernoulli]({{site.baseurl}}{% post_url 2020-08-19-bernoulli-probobality-distribution %}) \| Binomial \| [Geometric]({{site.baseurl}}{% post_url 2020-08-01-geometric-probability-distribution %}) \| Uniform \| Normal \| Poisson \| Beta
