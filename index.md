@@ -25,7 +25,11 @@ I write on topics related to:
 - Algorithms & Data Structures
 - Coding Interview Questions
 
-Check out [Post Index]({{site.baseurl}}{% link post_index.md %}) for more organized list of posts in this blog.
+I aim to over explain and ELI5 the topics in a simple language.
+
+Very little background knowledge is assumed from the reader.
+
+Check out **[Post Index]({{site.baseurl}}{% link post_index.md %})** for more organized list of posts in this blog.
 
 Know more [About Me]({{site.baseurl}}{% link about.md %}) if you are curious.
 

@@ -13,8 +13,11 @@ permalink: /index/
 
 ## Probability
 Law of Large Numbers <br/>
+Sampling Distribution of Sample Proportions: TODO <br/>
+Sampling Distribution of Sample Means: CLT <br/>
 [Central Limit Theorem]({{site.baseurl}}{% post_url 2020-08-29-central-limit-theorem %}) <br/>
-[CLT: Practice Questions]({{site.baseurl}}{% post_url 2020-08-29-q1-central-limit-theorem %})
+[CLT: Practice Questions - I]({{site.baseurl}}{% post_url 2020-08-29-q1-central-limit-theorem %}) <br/>
+[CLT: Practice Questions - II]({{site.baseurl}}{% post_url 2020-08-29-q2-central-limit-theorem %}) <br/>
 
 ## Probability Distributions:
 [Bernoulli]({{site.baseurl}}{% post_url 2020-08-19-bernoulli-probobality-distribution %}) \| Binomial \| [Geometric]({{site.baseurl}}{% post_url 2020-08-01-geometric-probability-distribution %}) \| Uniform \| Normal \| Poisson \| Beta
@@ -36,3 +39,6 @@ Law of Large Numbers <br/>
 
 ## Neural Networks:
 [Implimenting Neural Network with Backpropagation from Scratch]({{site.baseurl}}{% post_url 2020-08-01-impliment-neural-network-back-propagation-from-scratch %}) <br/>
+
+## Unsorted
+[ANOVA]({{site.baseurl}}{% post_url 2020-08-29-anova %}) <br/>

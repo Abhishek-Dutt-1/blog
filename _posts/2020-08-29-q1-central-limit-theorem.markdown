@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "CLT: Practice Questions"
+title:  "CLT: Practice Questions - I"
 date:   2020-08-29 14:13:00 +0530
 categories: probability clt
 ---
-Ref: [Central Limit Theorem]({{site.baseurl}}{% post_url 2020-08-29-central-limit-theorem %}) <br/>
+[Central Limit Theorem]({{site.baseurl}}{% post_url 2020-08-29-central-limit-theorem %}) | [CLT: Practice Questions - I]({{site.baseurl}}{% post_url 2020-08-29-q1-central-limit-theorem %}) | [CLT: Practice Questions - II]({{site.baseurl}}{% post_url 2020-08-29-q2-central-limit-theorem %}) <br/>
+
 <hr/>
 ### Problem 1:
 

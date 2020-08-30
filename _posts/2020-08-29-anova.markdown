@@ -1,0 +1,100 @@
+---
+layout: post
+title:  "ANOVA: Analysis of Variance"
+date:   2020-08-29 15:56:00 +0530
+categories: 
+---
+
+ANOVA is the statistical method for determining the existence of difference among several population means.
+
+Assumptions of ANOVA:
+1. Independent random sampling from each of the \\(r\\) populations
+2. The \\(r\\) populations under study are normally distributed <br/>
+    2.1 With mean \\(\mu_i\\) that may or may not be equal <br/>
+    2.2 But with equal variane \\(\sigma^2\\) <br/>
+
+These assumptions are necessary for the test statistic used in ANOVA to possess F-distribution when Null hypothesis is true.
+
+$$
+\text{ANOVA test statistic} = F_{(r-1, \, n-r)}
+$$
+
+Sample mean \\(i\\) (\\(i=1, ..., n\\)):
+
+$$
+\overline{x_i} = \frac{\sum_{i=1}^{n_i} x_{ij}}{n_i}
+$$
+
+Grand mean, i.e. mean of all data points:
+
+$$
+\overline{\overline{x}} = \frac{\sum_{i=1}^r \sum_{j=1}^{n_i} x_{ij}}{n}
+$$
+
+If the \\(r\\) population means are different (i.e. at least 2 of the population means are not equal), then the variation of the data points about thier respective sample means \\(\overline{x_i}\\) is likely to be small when compared with variation of the \\(r\\) sample means about the grand means \\(\overline{\overline{x}}\\).
+
+**Error deviation:** Difference between a data point and its sample mean:
+
+$$
+e_{ij} = x_{ij} - \overline{x_i}
+$$
+
+**Treatment deviation:** Deviation of a sample mean from the grand mean:
+
+$$
+t_i = \overline{x_i} - \overline{\overline{x}}
+$$
+
+The ANOVA principle thus say:
+When population means are not equal, the "average" error deviation is relatively small compared to the "average" treatment deviation.
+
+TODO: INSERT CHART HERE
+
+We define "Total deviation" of a data point \\(x_{ij}\\) as the deviation of the data point from the grand mean:
+
+$$
+\text{Tot}_{ij} = x_{ij} - \overline{\overline{x}} 
+$$
+
+i.e. for any data point:
+
+$$
+\begin{aligned}
+\text{Tot} &= \text{t} + \text{e} \\[2ex]
+\implies \sum_{i=1}^{r} \sum_{j=1}^{n_i} \text{Tot}_{ij}^2 &= \sum_{i=1}^r n_i \cdot (\overline{x_i} - \overline{\overline{x}})^2 + \sum_{i=1}^{r} \sum_{j=1}^{n_i} (x_{ij} - \overline{x_i})^2 \\[2ex]
+\implies \text{SST} &= \text{SSTR} + \text{SSE} \\[2ex]
+\end{aligned}
+$$
+
+Degrees of freedom associated with SST = \\(n-1\\) <br/>
+Degrees of freedom associated with SSTR = \\(r-1\\) <br/>
+Degrees of freedom associated with SSE = \\(n-r\\) <br/>
+
+$$
+\text{df(Total)} = \text{df(Treatment)} +\text{df(Error)}
+$$
+
+The Mean Squares:
+In finding the average squared deviation due to treatment and due to error, we devide each sums of squares by its degrees of freedom.
+
+$$
+\begin{aligned}
+\text{Mean Square Treatement} &= \text{MSTR} = \frac{\text{SSTR}}{r-1} \\[2ex]
+\text{Mean Square Error} &= \text{MSE} = \frac{\text{SSE}}{n-r}
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+E(MSE) &= \sigma^2 \\[2ex]
+E(MSTR) &= \sigma^2 + \frac{\sum n_i (\mu_i - \mu)^2}{r-1} \\[2ex]
+\end{aligned}
+$$
+
+Under the assumptions of ANOVA, the ratio \\(\frac{MSTR}{MSE}\\) possesses an F-distribution with \\(r-1\\) degrees of freedom for the numerator and \\(n-r\\) degrees of freedom for the denominator, when the Null hypothesis is true.
+
+The test statistic in Analysis of Variance is:
+
+$$
+F_{(r-1, n-r)} = \frac{MSTR}{MSE}
+$$

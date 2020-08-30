@@ -4,7 +4,8 @@ title:  "Central Limit Theorem"
 date:   2020-08-29 10:16:00 +0530
 categories: probability
 ---
-Ref: [CLT: Practice Questions]({{site.baseurl}}{% post_url 2020-08-29-q1-central-limit-theorem %})
+[Central Limit Theorem]({{site.baseurl}}{% post_url 2020-08-29-central-limit-theorem %}) | [CLT: Practice Questions - I]({{site.baseurl}}{% post_url 2020-08-29-q1-central-limit-theorem %}) | [CLT: Practice Questions - II]({{site.baseurl}}{% post_url 2020-08-29-q2-central-limit-theorem %}) <br/>
+
 <hr/>
 ### Definition:
 
