@@ -1,8 +1,11 @@
 ---
 layout: post
-title:  "Implimenting Neural Network with Backpropagation from Scratch"
+title:  "Implimenting Neural Network with Backpropagation from Scratch [WIP]"
 date:   2020-08-01 10:37:00 +0530
 ---
+
+UNDER CONSTRUCTION
+==================
 
 We will be creating a 2 layer neural netowrk for binary classification.
 

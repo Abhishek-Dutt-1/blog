@@ -25,7 +25,7 @@ I write on topics related to:
 - Algorithms & Data Structures
 - Coding Interview Questions
 
-I aim to over explain and ELI5 the topics in a simple language.
+Aim to over-explain and ELI5 the topics in a simple language.
 
 Very little background knowledge is assumed from the reader.
 

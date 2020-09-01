@@ -32,6 +32,9 @@ Sampling Distribution of Sample Means: CLT <br/>
 [Probability of choosing the unfair coin]({{site.baseurl}}{% post_url 2020-07-27-unfair-coin %}) <br/>
 [Probability of two Heads]({{site.baseurl}}{% post_url 2020-08-18-probability-of-2-heads %}) <br/>
 [Know the answer or guess the answer]({{site.baseurl}}{% post_url 2020-08-19-know-the-answer-or-guess-the-answer %}) <br/>
+[What is the expected number of coin tosses to get one heads?]({{site.baseurl}}{% post_url 2020-09-01-toss-before-one-heads %}) <br/>
+[What is the expected number of coin tosses to get two heads in a row?]({{site.baseurl}}{% post_url 2020-09-01-toss-before-two-heads %}) <br/>
+
 
 ## Hypothesis Testing:
 [Explain p-value in Simple Language]({{site.baseurl}}{% post_url 2020-08-10-p-value-in-simple-language %}) <br/>
@@ -39,6 +42,9 @@ Sampling Distribution of Sample Means: CLT <br/>
 
 ## Neural Networks:
 [Implimenting Neural Network with Backpropagation from Scratch]({{site.baseurl}}{% post_url 2020-08-01-impliment-neural-network-back-propagation-from-scratch %}) <br/>
+
+## Dynamic Programming
+[Coin Change (Minimum)]({{site.baseurl}}{% post_url 2020-08-31-coin-change %})
 
 ## Unsorted
 [ANOVA]({{site.baseurl}}{% post_url 2020-08-29-anova %}) <br/>
