@@ -1,0 +1,157 @@
+---
+layout: post
+title:  "ARIMA"
+date:   2020-09-02 16:38:00 +0530
+categories: arima
+---
+*Source: [DataCamp](https://www.khanacademy.org/math/ap-statistics/tests-significance-ap/idea-significance-tests/e/estimating-p-values-and-making-conclusions)*
+
+
+## Time Series Data:
+Features of Times series data:
+1. **Trend:** The overall general direction of the time series data (i.e. increasing, decreasing or no trend) <br/>
+<img alt="Instagram" src="{{site.baseurl}}/assets/images/arima-trend-0.png" width="250">
+<br/> <br/> 
+
+2. **Seasonality:** Weather or not the time series has patterns that repeat at regular intervals. <br/>
+<img alt="Instagram" src="{{site.baseurl}}/assets/images/arima-seasonality.png" width="250">
+<br/> <br/> 
+
+3. **Cyclicality:** When there is a repeating pattern but no fixed period. <br/>
+<img alt="Instagram" src="{{site.baseurl}}/assets/images/arima-cycle.png" width="250">
+<br/> <br/> 
+
+4. **White Noise:** Each data point is independent (or uncorrelated) of previous values. 
+
+
+## Stationarity:
+**Stationary:** Distribution of data does not change with time.
+
+To model a time series it must be Stationary.
+
+A stationary time series has following properties:
+1. **No trend:** series is not increasing or decreasing <br/>
+<img alt="Instagram" src="{{site.baseurl}}/assets/images/arima-trend.png" width="500">
+<br/> <br/> 
+
+2. **Constant Variance:** On average, the distance of data points from **zero** isnt changing with time <br/>
+<img alt="Instagram" src="{{site.baseurl}}/assets/images/arima-variance.png" width="500"> 
+<br/> <br/> 
+
+3. **Constant Autocorrelation:** Relation of each data points to its neighbours remains same <br/>
+<img alt="Instagram" src="{{site.baseurl}}/assets/images/arima-autocorr.png" width="500">
+<br/> <br/> 
+
+
+If the time-series data is stationary, ARMA model can be used for forecasting. If it is not stationary, ARMA model cannot be used.
+
+However, non-stationary data can be often transformed into stationary data.
+
+
+
+```python
+# Import augmented dicky-fuller test function
+from statsmodels.tsa.stattools import adfuller
+
+# Run test
+result = adfuller(earthquake['earthquakes_per_year'])
+
+# Print test statistic
+print(result[0])
+
+# Print p-value
+print(result[1])
+
+# Print critical values
+print(result[4]) 
+```
+
+```
+(
+  -3.183192251191782, 
+  0.02097842525600371, 
+  2, 
+  96, 
+  {
+    '1%': -3.5003788874873405, 
+    '5%': -2.8921519665075235, 
+    '10%': -2.5830997960069446
+  }, 
+  549.0681467660734
+)
+```
+
+
+One common method to make a time-series stationary is to take difference of each data point with with previous data point.
+In pandas it is done using **df.diff().dropna()**, 
+In sql it will be something like **select data - lag(data) from table**
+
+TODO : Flesh out above section
+
+## ARMA Model
+
+### AR Models
+Autoregressive models
+
+Order of the models indicates the number of time lags used.
+
+AR(1) model (First order AR model):
+
+$$
+y_t = a_1 \cdot y_{t-1} + \epsilon_t
+$$
+
+i.e. each data point in the time series is a scaled version of previous data point plus a random error (white noise)
+\\(a_1\\) is called the autoregressive coefficient at lag 1
+
+
+AR(2) model (Second order AR model):
+
+$$
+y_t = a_1 \cdot y_{t-1} + a_2 \cdot y_{t-2} + \epsilon_t
+$$
+
+\\(a_1\\) is called the autoregressive coefficient at lag 1
+\\(a_2\\) is called the autoregressive coefficient at lag 2
+
+AR(p) model (p order AR model):
+
+$$
+y_t = a_1 \cdot y_{t-1} + a_2 \cdot y_{t-2} + \cdots + a_p \cdot y_{t-p} \epsilon_t
+$$
+
+### MA Models
+
+Moving Average (MA) models:
+
+MA(1) model:
+
+$$
+y_t = m_1 \cdot \epsilon_{t-1} + \epsilon_t
+$$
+
+MA(2) model:
+
+$$
+y_t = m_1 \cdot \epsilon_{t-1} + m_2 \cdot \epsilon_{t-2} + \epsilon_t
+$$
+
+MA(q) model:
+
+$$
+y_t = m_1 \cdot \epsilon_{t-1} + m_2 \cdot \epsilon_{t-2} + \cdots + \m_q \cdot \epsilon_{t-q} + \epsilon_t
+$$
+
+ARMA:
+Autoregressive Moving Average (ARMA) model:
+ARMA = AR + MA
+
+ARMA(1, 1) model:
+
+$$
+y_t = a_1 \cdot y_{t-1} + m_1 \cdot \epsilon_{t-1} + \epsilon_t
+$$
+
+ARMA(p, q) model:
+- p = order of AR part
+- q = order of MA part

@@ -48,3 +48,5 @@ Sampling Distribution of Sample Means: CLT <br/>
 
 ## Unsorted
 [ANOVA]({{site.baseurl}}{% post_url 2020-08-29-anova %}) <br/>
+[ARIMA]({{site.baseurl}}{% post_url 2020-09-02-arima %}) <br/>
+[Pros and Cons of Common Classification Algorithms]({{site.baseurl}}{% post_url 2020-09-05-classification-algorithm-pros-and-cons %}) <br/>
