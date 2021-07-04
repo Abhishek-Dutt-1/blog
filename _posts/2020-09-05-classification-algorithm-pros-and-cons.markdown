@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Pros and Cons of Common Classification Algorithms"
-date:   2020-09-05 12:07:00 +0530
+title: "Pros and Cons of Common Classification Algorithms"
+date: 2020-09-05 12:07:00 +0530
 categories: 
 ---
 *Source: [Reddit](https://www.reddit.com/r/learnmachinelearning/comments/imbppq/5_best_machine_learning_algorithms_for/)*
